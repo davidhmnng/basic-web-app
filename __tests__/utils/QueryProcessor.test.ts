@@ -17,4 +17,8 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test('should return correct Andrew ID for "What is your Andrew ID?"', () => {
+        expect(QueryProcessor('What is your Andrew ID?')).toBe('hdng');
+    });
 });
