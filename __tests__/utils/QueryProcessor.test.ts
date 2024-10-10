@@ -27,7 +27,7 @@ function QueryProcessor(query: string): string {
 }
 
 function handleAddition(query: string): string {
-    const regex = /(\d+)\s+plus\s+(\d+)/i;
+    const regex = /(\d+)\s*plus\s*(\d+)/i; // Updated: \s* allows for zero or more spaces
     const match = query.match(regex);
 
     if (match) {
