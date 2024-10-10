@@ -27,7 +27,8 @@ function QueryProcessor(query: string): string {
 }
 
 function handleAddition(query: string): string {
-    const regex = /(\d+)\s*plus\s*(\d+)/i; // Updated: \s* allows for zero or more spaces
+    // Match any text before, and focus on finding two numbers around the word "plus"
+    const regex = /(\d+)\s*plus\s*(\d+)/i;
     const match = query.match(regex);
 
     if (match) {
