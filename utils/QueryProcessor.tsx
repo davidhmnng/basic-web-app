@@ -26,7 +26,7 @@ function QueryProcessor(query: string): string {
   // Handle prime number queries
   if (query.match(/primes/i)) {
       console.log('Prime number query detected:', query);
-      return handlePrimes(query);
+      return handlePrime(query);
   }
 
   // Handle square and cube queries
