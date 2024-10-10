@@ -1,18 +1,20 @@
 function QueryProcessor(query: string): string {
     // Check if the query involves an addition operation
     if (query.match(/plus/i)) {
+        console.log('Addition query detected:', query);
         return handleAddition(query);
     }
 
     // Check if the query involves a comparison of numbers
     if (query.match(/largest/i)) {
+        console.log('Comparison query detected:', query);
         return handleComparison(query);
     }
 
     // Default responses for known cases
     if (query === "shakespeare") {
         return (
-            "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
+            "William Shakespeare (26 April 1564 - 23 April 1616) was askldfjaljsdfk an " +
             "English poet, playwright, and actor, widely regarded as the greatest " +
             "writer in the English language and the world's pre-eminent dramatist."
         );
@@ -23,7 +25,7 @@ function QueryProcessor(query: string): string {
     }
 
     // If the query doesn't match any known type, return a default response
-    return "I don't know the answer to that.";
+    return "No Match";
 }
 
 function handleAddition(query: string): string {
@@ -35,6 +37,7 @@ function handleAddition(query: string): string {
         const num1 = parseInt(match[1], 10);
         const num2 = parseInt(match[2], 10);
         const sum = num1 + num2;
+        console.log(`Calculating sum: ${num1} + ${num2} = ${sum}`);
         return `The sum of ${num1} and ${num2} is ${sum}.`;
     }
 
@@ -50,6 +53,7 @@ function handleComparison(query: string): string {
         const num2 = parseInt(match[2], 10);
         const num3 = parseInt(match[3], 10);
         const largest = Math.max(num1, num2, num3);
+        console.log(`Finding largest: ${num1}, ${num2}, ${num3} => ${largest}`);
         return `The largest number is ${largest}.`;
     }
 
