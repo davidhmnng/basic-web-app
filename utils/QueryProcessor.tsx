@@ -116,7 +116,7 @@ function handleComparison(query: string): string {
   if (numbers.length > 0) {
       const largest = Math.max(...numbers);
       return `${largest}`;
-  }
+  } 
 
   return "I couldn't parse the numbers for comparison.";
 }
