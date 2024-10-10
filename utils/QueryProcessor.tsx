@@ -38,7 +38,7 @@ function handleAddition(query: string): string {
       const num2 = parseInt(match[2], 10);
       const sum = num1 + num2;
       console.log(`Calculating sum: ${num1} + ${num2} = ${sum}`);
-      return `The sum of ${num1} and ${num2} is ${sum}.`;
+      return `${sum}`;
   }
 
   return "I couldn't parse the numbers for addition.";
@@ -54,7 +54,7 @@ function handleComparison(query: string): string {
       const num3 = parseInt(match[3], 10);
       const largest = Math.max(num1, num2, num3);
       console.log(`Finding largest: ${num1}, ${num2}, ${num3} => ${largest}`);
-      return `The largest number is ${largest}.`;
+      return `${largest}`;
   }
 
   return "I couldn't parse the numbers for comparison.";
